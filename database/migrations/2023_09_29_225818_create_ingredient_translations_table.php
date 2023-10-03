@@ -11,7 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('ingredient_translations', function (Blueprint $table) {
+        Schema::create('ingredient_translations', function (Blueprint $table)
+        {
             $table->id();
             $table->foreignId("ingredient_id")->constrained();
             $table->string("locale")->index()->references("locale")->on("languages");

@@ -11,7 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('languages', function (Blueprint $table) {
+        Schema::create('languages', function (Blueprint $table)
+        {
             $table->string("locale")->primary();
             $table->string("name");
         });
