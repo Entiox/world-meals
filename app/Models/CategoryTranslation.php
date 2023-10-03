@@ -11,4 +11,9 @@ class CategoryTranslation extends Model
 
     public $timestamps = false;
     protected $fillable = ["title"];
+
+    public function language() 
+    {
+        return $this->belongsTo(Language::class, "locale", "locale");
+    }
 }

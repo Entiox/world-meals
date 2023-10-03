@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId("meal_id")->constrained()->onDelete("cascade");
             $table->foreignId("tag_id")->constrained()->onDelete("cascade");
+            $table->unique(["meal_id", "tag_id"]);
         });
     }
 

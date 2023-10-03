@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('category_translations', function (Blueprint $table) {
             $table->id();
             $table->foreignId("category_id")->constrained();
-            $table->string("locale")->index();
+            $table->string("locale")->index()->references("locale")->on("languages");
             $table->string("title");
             $table->unique(["category_id", "locale"]);
         });

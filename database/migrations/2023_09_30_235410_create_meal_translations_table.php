@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('meal_translations', function (Blueprint $table) {
             $table->id();
             $table->foreignId("meal_id")->constrained();
-            $table->string("locale")->index();
+            $table->string("locale")->index()->references("locale")->on("languages");
             $table->string("title");
             $table->tinyText("description");
             $table->unique(["meal_id", "locale"]);
