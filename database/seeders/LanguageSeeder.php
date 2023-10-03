@@ -13,7 +13,7 @@ class LanguageSeeder extends Seeder
     public function run(): void
     {
         DB::table("languages")->insert(["locale" => "en", "name" => "English"]);
-        DB::table("languages")->insert(["locale" => "de", "name" => "German"]);
-        DB::table("languages")->insert(["locale" => "hr", "name" => "Croatian"]);
+        DB::table("languages")->insert(["locale" => "de", "name" => "Deutsch"]);
+        DB::table("languages")->insert(["locale" => "hr", "name" => "Hrvatski"]);
     }
 }
