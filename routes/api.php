@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\MealController;
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -10,3 +13,5 @@
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+
+Route::get('/meals', [MealController::class, "getMeals"]);
