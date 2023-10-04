@@ -96,7 +96,6 @@ class MealController extends Controller
     private function modifyAttachments($value){
         return $value->map(function($attachmentValue)
             {
-                $modifiedValue = array();
                 $modifiedValue["id"] = $attachmentValue["id"];
                 $modifiedValue["title"] = $attachmentValue["translations"][0]["title"];
                 $modifiedValue["slug"] = $attachmentValue["slug"];
